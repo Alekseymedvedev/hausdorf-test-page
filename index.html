@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Test</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<!-- header  start------------------------------------------------------------------------------------ -->
+	<header id="header" class="header">
+
+	</header>
+	<!-- header  end------------------------------------------------------------------------------------ -->
+
+	<!-- main  start------------------------------------------------------------------------------------ -->
+	<main class="main">
+		<section class="resume">
+			<div class="container">
+				<h1 class="resume__title">Отправьте ваше резюме</h1>
+				<div class="resume__box">
+					<div class="resume__text">Постройте своё будущее c РусЭлитТрейдинг в городе</div>
+					<div class="resume__dropdown dropdown">
+						<div class="dropdown__box">
+							<button class="dropdown__button" type="button">
+								Нижний Новгород
+							</button>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M19.5 15L12 7.5L4.5 15" stroke="red" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<ul class="dropdown__list">
+							<li class="dropdown__list-item dropdown__list-item-cor" data-city-coordinates="56.326797"
+								data-city-coordinates1="44.006516" data-value="Москва">Москва</li>
+							<li class="dropdown__list-item dropdown__list-item-cor" data-city-coordinates="45.035470"
+								data-city-coordinates1="38.975313" data-value="Краснодар">Краснодар</li>
+							<li class="dropdown__list-item dropdown__list-item-cor" data-city-coordinates="55.796127"
+								data-city-coordinates1="49.106414" data-value="Казань">Казань</li>
+							<li class="dropdown__list-item dropdown__list-item-cor" data-city-coordinates="56.326797"
+								data-city-coordinates1="44.006516" data-value="Нижний Новгород">Нижний Новгород</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="resume__inner flex">
+
+					<form class="resume__form form" action="/" method="post">
+
+						<!-- Инпут для передачи данных о городе -->
+						<input type="hidden" name="city" value="" class="dropdown__input-hidden dropdown__input-city">
+
+
+						<label class="form__label">
+							<input class="form__label-input" name="text" type="text" placeholder="Как вас зовут?">
+							<span class="form__label-text">Ваш имя</span>
+						</label>
+						<label class="form__label"> 
+							<input class="form__label-input" name="email" type="email" placeholder="Ваш E–mail">
+							<span class="form__label-text">Ваш E–mail</span>
+						</label>
+
+						<div class="resume__dropdown dropdown">
+							<div class="dropdown__box">
+								<button class="dropdown__button" type="button">
+									Выберите вакансию
+								</button>
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.5 15L12 7.5L4.5 15" stroke="black" stroke-width="1.5"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+
+							<ul class="dropdown__list">
+								<li class="dropdown__list-item" data-value="job">Программист</li>
+								<li class="dropdown__list-item" data-value="job">Верстальщик</li>
+								<li class="dropdown__list-item" data-value="job">Аналитик</li>
+								<li class="dropdown__list-item" data-value="job">SEO специалист</li>
+								<li class="dropdown__list-item" data-value="job">Контент менеджер</li>
+							</ul>
+							<input type="text" name="select-job" value="" class="dropdown__input-hidden">
+						</div>
+						<textarea class="form__textarea" name="textarea" cols="30" rows="4"
+							placeholder="Напишите о себе кратко"></textarea>
+						<button class="form__file-btn" type="button">Прикрепить документы</button>
+
+						<!-- Сюда клонируется блок с input type="file" -->
+						<div class="form__file-box"></div>
+
+						<label class="check-label form__label-checkbox">
+							Я соглашаюсь с ,
+							<a href="#">политикой конфиденциальности</a>
+							нажимая на кнопку “Откликнуться”
+							<input class="check-input form__input-checkbox" type="checkbox" checked>
+							<span class="check-style"></span>
+						</label>
+						<button class="form__btn">Откликнуться</button>
+					</form>
+					<div class="resume__contacts contacts">
+						<div id="map" class="contcts__map" style="width: 100%;  height: 440px"></div>
+						<div class="contacts__title">Контакты:</div>
+						<div class="contacts__box-link">
+							<a class="contacts__phone" href="tel:+74959297078">+7 495 929-70-78</a>
+							<a class="contacts__mail" href="mailto:welcome@ret-team.su">welcome@ret-team.su</a>
+						</div>
+						<div class="contacts__work-time">Мы работаем в будни с 9:00 до 18:00. </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Отсюда клонируется блок с input type="file" -->
+		<template class="template-file">
+			<div class="form__file-item hidden">
+				<span class="form__file-item-text"></span>
+				<input class="form__file-input" type="file" name="file" />
+				<span class="form__file-input-remove"></span>
+			</div>
+		</template>
+
+	</main>
+
+	<!-- main end------------------------------------------------------------------------------------ -->
+
+
+
+
+	<!-- footer start------------------------------------------------------------------------------------ -->
+	<footer id="footer" class="footer">
+		<div class="container">
+
+		</div>
+	</footer>
+
+	<!-- footer end------------------------------------------------------------------------------------ -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e0c809c1-57b7-47bb-bafa-209a1dffd3a6&lang=ru_RU"
+		type="text/javascript"> </script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
